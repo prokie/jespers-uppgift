@@ -11,3 +11,9 @@ dependencies = [
     "sionna>=0.8.0",
     "tensorflow>=2.18.0",
 ]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.15.0",
+    "ruff>=0.9.6",
+]
