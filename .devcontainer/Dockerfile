@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 # Install dependencies
-RUN apt update && apt install -y curl git zsh wget fonts-powerline zsh-autosuggestions zsh-syntax-highlighting
+RUN apt update && apt upgrade -y && apt install -y curl git zsh wget fonts-powerline clang-17 libc++-17-dev libc++abi-17-dev cmake ninja-build libpng-dev libjpeg-dev
 
 # Install Oh My Zsh (unattended)
 RUN sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended \
@@ -17,7 +17,9 @@ RUN git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git
 RUN sed -i 's/^plugins=(git)$/plugins=(git zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)/' ~/.zshrc
 
 
+# Instal and configure uv
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+ENV UV_LINK_MODE=copy
 
 # Set default shell to Zsh
 CMD ["zsh"]
