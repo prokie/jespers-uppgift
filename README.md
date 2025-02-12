@@ -22,6 +22,6 @@
 
 4. Install dependencies using `uv sync`:
     ```sh
-    uv sync --all-extras
+    uv sync --all-extras --compile-bytecode
     ```
 
