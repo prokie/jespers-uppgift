@@ -6,7 +6,8 @@
             "extensions": [
                 "tamasfe.even-better-toml",
                 "ms-python.python",
-                "charliermarsh.ruff"
+                "charliermarsh.ruff",
+                "ms-python.mypy-type-checker"
             ]
         }
     }

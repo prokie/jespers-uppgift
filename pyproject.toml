@@ -13,7 +13,19 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = [
-    "mypy>=1.15.0",
-    "ruff>=0.9.6",
-]
+dev = ["mypy>=1.15.0", "pandas-stubs>=2.2.3.241126", "ruff>=0.9.6"]
+
+
+[tool.ruff.lint]
+unfixable = ["F401", "F841"]
+select = ["ALL"]
+ignore = ["DOC", "D", "T201", "CPY", "ERA"]
+preview = true
+
+
+[tool.mypy]
+strict = true
+
+
+[tool.ruff.lint.isort]
+required-imports = ["from __future__ import annotations"]

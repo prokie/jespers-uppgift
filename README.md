@@ -22,6 +22,6 @@
 
 4. Install dependencies using `uv sync`:
     ```sh
-    uv sync
+    uv sync --all-extras
     ```
 

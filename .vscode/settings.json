@@ -1,0 +1,11 @@
+{
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        }
+    },
+    "python.analysis.typeCheckingMode": "standard",
+    "python.analysis.diagnosticMode": "openFilesOnly",
+}
